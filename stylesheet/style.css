@@ -1,0 +1,12 @@
+h1 {
+    text-align: left;
+    color: whitesmoke;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+body{
+    background-image: url("https://coffee-basic.com/wp-content/uploads/2021/03/cup-of-hot-coffee-scaled.jpg");
+    background-size: cover;
+}
