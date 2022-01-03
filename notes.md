@@ -9,7 +9,7 @@ Coffee Menu will display images of different types of coffee. It will use a publ
 * Like your favorite Coffees
 
 ### API
-* https://github.com/fernandohg97/coffee-api
+* https://sampleapis.com/api-list/coffee
 
 ### Project Requirements
 * The project will use HTML/CSS/Javascript frontend and access a public API

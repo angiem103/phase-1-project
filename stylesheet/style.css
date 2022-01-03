@@ -1,7 +1,8 @@
 h1 {
     text-align: left;
-    color: whitesmoke;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(241, 223, 206, 0.774);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px;
     padding-top: 20px;
     padding-left: 30px;
 }
