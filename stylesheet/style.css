@@ -1,13 +1,29 @@
 h1 {
     text-align: left;
-    color: rgba(241, 223, 206, 0.774);
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 70px;
+    color: rgba(240, 236, 233, 0.774);
+    font-family: Lucidatypewriter;
+    font-weight: lighter;
+    font-size: 65px;
     padding-top: 20px;
     padding-left: 30px;
 }
 
-body{
+body {
     background-image: url("https://coffee-basic.com/wp-content/uploads/2021/03/cup-of-hot-coffee-scaled.jpg");
     background-size: cover;
+}
+
+label {
+    color: rgba(240, 236, 233, 0.774);
+    padding-left: 50px;
+    font-size: 30px;
+    font-family: Monaco;
+}
+
+select {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: Monaco;
+    background:rgba(240, 236, 233, 0.774);
+    color:rgba(24, 23, 23, 0.774);
 }
