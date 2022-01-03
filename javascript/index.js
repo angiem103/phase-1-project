@@ -1,21 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const baseURL = 'https://api.sampleapis.com/coffee/hot';
+const baseURL = 'https://api.sampleapis.com/coffee/hot';
 fetch(baseURL)
   .then(resp => resp.json())
-  .then(data => addSelections(data))
+  .then(data => addSelections(data));
+  const btn = document.getElementById("details")
+  btn.addEventListener('click', (e) => console.log(e.target))
 })
 
 function addSelections(coffees) {
-    const coffeesArr = createNewArr(coffees)
-    
+    const coffeesArr = createNewArr(coffees);
     coffeesArr.forEach(coffee => {
         const select = document.querySelector('#coffees')
         const option = document.createElement('option')
         option.innerText = coffee.title
         select.appendChild(option)
-    })
+    });
 
-}
+};
 
 function createNewArr(coffees){
 const latte = {
@@ -27,10 +28,11 @@ const latte = {
       "Foam"
     ],
     "id": 2
-  }
-const modifiedCoffees = [...coffees]
-modifiedCoffees.splice(1, 0, latte)
-modifiedCoffees.splice(-3)
-modifiedCoffees[0].title = "Black Coffee"
-return modifiedCoffees
-}
+  };
+const modifiedCoffees = [...coffees];
+modifiedCoffees.splice(1, 0, latte);
+modifiedCoffees.splice(-3);
+modifiedCoffees[0].title = "Black Coffee";
+return modifiedCoffees;
+};
+
