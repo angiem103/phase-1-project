@@ -82,7 +82,14 @@ function appendDescription(obj){
 
 function toggleHeart(heart){
     const btn = heart.target
-    if(btn.classList.contains == 'far')
-    btn.classList.remove('far')
-    btn.classList.add('fas')
+    if(btn.classList.contains("far")){
+        btn.classList.remove("far")
+        btn.classList.add("fas")
+        console.log(btn)
+    }else{
+        btn.classList.remove("fas")
+        btn.classList.add("far")
+    }
+
 }
+ 
