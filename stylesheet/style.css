@@ -56,8 +56,17 @@ li:first-child {
 }
 
 .container i {
-    color: rgba(160, 39, 39, 0.774);
+    color: rgba(189, 41, 41, 0.774);
+    font-size: 20px;
+    display:inline-block;
+    
+}
+
+.container p {
+    color:rgba(240, 236, 233, 0.774);
     margin-left: 66px;
-    font-size: 20px;;
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 10px;
     
 }
