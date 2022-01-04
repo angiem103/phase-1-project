@@ -1,5 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
 const baseURL = 'https://api.sampleapis.com/coffee/hot';
+
+
+document.addEventListener("DOMContentLoaded", function() {
 fetch(baseURL)
   .then(resp => resp.json())
   .then(data => {
@@ -12,7 +14,7 @@ fetch(baseURL)
 
 function addSelections(coffeesArr) {
     coffeesArr.forEach(coffee => {
-        const select = document.querySelector('#coffees')
+        const select = document.querySelector('#coffees');
         const option = document.createElement('option')
         option.innerText = coffee.title
         select.appendChild(option)
@@ -38,8 +40,15 @@ modifiedCoffees[0].title = "Black Coffee";
 return modifiedCoffees;
 };
 
-function addingDetails(e) {
-    console.log('click')
-    const select = document.querySelector('#coffees')
-    console.log(select.value)
+function addingDetails() {
+    fetch(baseURL)
+    .then(resp => resp.json())
+    .then(data => {
+        const coffeesArr = createNewArr(data)
+        const select = document.querySelector('#coffees');
+        let obj = coffeesArr.find(obj => obj.title === select.value)
+        console.log(obj)
+        let summary = document.querySelector('#description')
+        summary.innerText = obj.description
+  });
 }
