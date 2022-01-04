@@ -69,7 +69,20 @@ function appendDescription(obj){
     div.innerHTML = ''
     const i = document.createElement('i')
     i.classList.add("far", "fa-heart")
-    console.log(i)
+    i.setAttribute('id', 'heart-btn')
+    const p = document.createElement('p')
+    p.innerText = "My Favorite"
+    div.appendChild(p)
     div.appendChild(i)
+
+    const heart = document.querySelector('#heart-btn')
+    heart.addEventListener('click', toggleHeart)
 }
 
+
+function toggleHeart(heart){
+    const btn = heart.target
+    if(btn.classList.contains == 'far')
+    btn.classList.remove('far')
+    btn.classList.add('fas')
+}
