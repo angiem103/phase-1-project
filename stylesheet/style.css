@@ -27,3 +27,20 @@ select {
     background:rgba(240, 236, 233, 0.774);
     color:rgba(24, 23, 23, 0.774);
 }
+
+button {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: Monaco;
+    background:rgba(240, 236, 233, 0.774);
+    color:rgba(24, 23, 23, 0.774);
+}
+
+summary {
+    color:rgba(240, 236, 233, 0.774);
+    margin-left: 64px;
+    margin-right: 52%;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
