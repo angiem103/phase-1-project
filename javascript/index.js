@@ -8,7 +8,7 @@ fetch(baseURL)
     const coffeesArr = createNewArr(data)
     addSelections(coffeesArr)
     const btn = document.getElementById("details")
-    btn.addEventListener('click', addingDetails)
+    btn.addEventListener('click', renderDetails)
   });
 });
 
@@ -40,24 +40,29 @@ modifiedCoffees[0].title = "Black Coffee";
 return modifiedCoffees;
 };
 
-function addingDetails() {
+function renderDetails() {
     fetch(baseURL)
     .then(resp => resp.json())
     .then(data => {
         const coffeesArr = createNewArr(data);
         const select = document.querySelector('#coffees');
         let obj = coffeesArr.find(obj => obj.title === select.value);
-        console.log(obj)
-        let summary = document.querySelector('#description');
-        summary.innerText = obj.description;
-        const ul = document.createElement('ul');
-        ul.innerText = "Ingredients"
-        ul.classList.add('ingredients')
-        summary.appendChild(ul)
-        obj.ingredients.forEach(ingredient => {
-            const li = document.createElement('li')
-            li.innerText = ingredient
-            ul.appendChild(li)
-        })
+        appendDescription(obj)
+
   });
+}
+
+function appendDescription(obj){
+    const summary = document.querySelector('#description');
+    const ul = document.createElement('ul');
+    ul.innerText = "Ingredients";
+    ul.classList.add('ingredients');
+    summary.innerText = obj.description;
+    summary.appendChild(ul);
+
+    obj.ingredients.forEach(ingredient => {
+        const li = document.createElement('li')
+        li.innerText = ingredient
+        ul.appendChild(li)
+    })
 }
