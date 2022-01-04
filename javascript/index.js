@@ -1,6 +1,5 @@
 const baseURL = 'https://api.sampleapis.com/coffee/hot';
 
-
 document.addEventListener("DOMContentLoaded", function() {
 fetch(baseURL)
   .then(resp => resp.json())
@@ -65,4 +64,12 @@ function appendDescription(obj){
         li.innerText = ingredient
         ul.appendChild(li)
     })
+
+    const div = document.querySelector('.container')
+    div.innerHTML = ''
+    const i = document.createElement('i')
+    i.classList.add("far", "fa-heart")
+    console.log(i)
+    div.appendChild(i)
 }
+
