@@ -44,11 +44,20 @@ function addingDetails() {
     fetch(baseURL)
     .then(resp => resp.json())
     .then(data => {
-        const coffeesArr = createNewArr(data)
+        const coffeesArr = createNewArr(data);
         const select = document.querySelector('#coffees');
-        let obj = coffeesArr.find(obj => obj.title === select.value)
+        let obj = coffeesArr.find(obj => obj.title === select.value);
         console.log(obj)
-        let summary = document.querySelector('#description')
-        summary.innerText = obj.description
+        let summary = document.querySelector('#description');
+        summary.innerText = obj.description;
+        const ul = document.createElement('ul');
+        ul.innerText = "Ingredients"
+        ul.classList.add('ingredients')
+        summary.appendChild(ul)
+        obj.ingredients.forEach(ingredient => {
+            const li = document.createElement('li')
+            li.innerText = ingredient
+            ul.appendChild(li)
+        })
   });
 }
