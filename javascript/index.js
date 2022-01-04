@@ -2,20 +2,22 @@ document.addEventListener("DOMContentLoaded", function() {
 const baseURL = 'https://api.sampleapis.com/coffee/hot';
 fetch(baseURL)
   .then(resp => resp.json())
-  .then(data => addSelections(data));
-  const btn = document.getElementById("details")
-  btn.addEventListener('click', (e) => console.log(e.target))
-})
+  .then(data => {
+    const coffeesArr = createNewArr(data)
+    addSelections(coffeesArr)
+    const btn = document.getElementById("details")
+    btn.addEventListener('click', addingDetails)
+  });
+});
 
-function addSelections(coffees) {
-    const coffeesArr = createNewArr(coffees);
+function addSelections(coffeesArr) {
     coffeesArr.forEach(coffee => {
         const select = document.querySelector('#coffees')
         const option = document.createElement('option')
         option.innerText = coffee.title
         select.appendChild(option)
-    });
 
+    });
 };
 
 function createNewArr(coffees){
@@ -36,3 +38,8 @@ modifiedCoffees[0].title = "Black Coffee";
 return modifiedCoffees;
 };
 
+function addingDetails(e) {
+    console.log('click')
+    const select = document.querySelector('#coffees')
+    console.log(select.value)
+}
