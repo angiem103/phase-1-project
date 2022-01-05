@@ -1,7 +1,7 @@
 # Coffee Menu
 
 ### Overview
-![Alt Text](file:///Users/angiematicorena/Documents/coffee%20menu%20gift.gif)
+![](https://github.com/angiem103/phase-1-project/blob/main/coffee%20menu%20gift.gif)
 ### Features
 
 ### How to use
