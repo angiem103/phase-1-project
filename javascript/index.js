@@ -1,31 +1,18 @@
 const baseURL = 'https://api.sampleapis.com/coffee/hot';
 
-function getData(url) {
-    fetch(url)
-  .then(resp => resp.json())
-  .then(data =>  data)
-}
-
+//Get data on document load, modify data and iterate through array
 document.addEventListener("DOMContentLoaded", function() {
-        const data = getData(baseURL)
-        const coffeesArr = createNewArr(data)
-        addSelections(coffeesArr)
-        const btn = document.getElementById("details")
-        btn.addEventListener('click', renderDetails)
+fetch(baseURL)
+  .then(resp => resp.json())
+  .then(data => {
+    const coffeesArr = createNewArr(data)
+    addSelections(coffeesArr)
+    const btn = document.getElementById("details")
+    btn.addEventListener('click', renderDetails)
+  });
+});
 
-    });
-
-// document.addEventListener("DOMContentLoaded", function() {
-// fetch(baseURL)
-//   .then(resp => resp.json())
-//   .then(data => {
-//     const coffeesArr = createNewArr(data)
-//     addSelections(coffeesArr)
-//     const btn = document.getElementById("details")
-//     btn.addEventListener('click', renderDetails)
-//   });
-// });
-
+//Function to iterate through array and append coffee title's to select dropdown.
 function addSelections(coffeesArr) {
     coffeesArr.forEach(coffee => {
         const select = document.querySelector('#coffees');
@@ -36,6 +23,7 @@ function addSelections(coffeesArr) {
     });
 };
 
+//Function to modify array. Elminate 3 last objects and add an additional one with index of 1.
 function createNewArr(coffees){
 const latte = {
     "title": "Latte",
@@ -53,7 +41,8 @@ modifiedCoffees.splice(-3);
 modifiedCoffees[0].title = "Black Coffee";
 return modifiedCoffees;
 };
-debugger
+
+//Getting data and modifying it to append the description.
 function renderDetails() {
     fetch(baseURL)
     .then(resp => resp.json())
@@ -66,6 +55,7 @@ function renderDetails() {
   });
 }
 
+//Function to append coffee details including favorite button
 function appendDescription(obj){
     const summary = document.querySelector('#description');
     const ul = document.createElement('ul');
@@ -94,7 +84,7 @@ function appendDescription(obj){
     heart.addEventListener('click', toggleHeart)
 }
 
-
+//Function to favorite a coffee.
 function toggleHeart(heart){
     const btn = heart.target
     if(btn.classList.contains("far")){
