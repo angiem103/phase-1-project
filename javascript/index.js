@@ -1,15 +1,30 @@
 const baseURL = 'https://api.sampleapis.com/coffee/hot';
 
-document.addEventListener("DOMContentLoaded", function() {
-fetch(baseURL)
+function getData(url) {
+    fetch(url)
   .then(resp => resp.json())
-  .then(data => {
-    const coffeesArr = createNewArr(data)
-    addSelections(coffeesArr)
-    const btn = document.getElementById("details")
-    btn.addEventListener('click', renderDetails)
-  });
-});
+  .then(data =>  data)
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+        const data = getData(baseURL)
+        const coffeesArr = createNewArr(data)
+        addSelections(coffeesArr)
+        const btn = document.getElementById("details")
+        btn.addEventListener('click', renderDetails)
+
+    });
+
+// document.addEventListener("DOMContentLoaded", function() {
+// fetch(baseURL)
+//   .then(resp => resp.json())
+//   .then(data => {
+//     const coffeesArr = createNewArr(data)
+//     addSelections(coffeesArr)
+//     const btn = document.getElementById("details")
+//     btn.addEventListener('click', renderDetails)
+//   });
+// });
 
 function addSelections(coffeesArr) {
     coffeesArr.forEach(coffee => {
@@ -38,7 +53,7 @@ modifiedCoffees.splice(-3);
 modifiedCoffees[0].title = "Black Coffee";
 return modifiedCoffees;
 };
-
+debugger
 function renderDetails() {
     fetch(baseURL)
     .then(resp => resp.json())
