@@ -3,6 +3,8 @@
 ### Overview
 This Chic Coffee Menu will let you select your favorite coffee from the dropdown and view its description and ingredients.
 
+![coffee menu gift](https://user-images.githubusercontent.com/91964904/148150324-3d394881-3e29-4c9f-8c6b-f074c6b34c93.gif)
+
 ### Project Features (MVPs)
 - On document load it displays all coffee types in dropdown.
 - When selecting coffee from dropdown, the "Tell Me More" button triggers a click event to display Coffee Information.
