@@ -5,8 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
 fetch(baseURL)
   .then(resp => resp.json())
   .then(data => {
-    const coffeesArr = createNewArr(data)
-    addSelections(coffeesArr)
+    const coffeesArr = createNewArr(data);
+    addSelections(coffeesArr);
+    const btn = document.getElementById("details");
+    btn.addEventListener('click', renderDetails);
   });
 });
 
