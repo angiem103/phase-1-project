@@ -14,3 +14,7 @@ This Chic Coffee Menu will let you select your favorite coffee from the dropdown
     - The "Tell Me More" button will display details and ingredients of your coffee.
 - Favorite your coffe by clicking the heart button.
 - Don't like the coffee anymore? Click the heart button a second time to unfavorite your coffee.
+
+
+ENJOY!!
+
