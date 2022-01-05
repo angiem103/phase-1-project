@@ -17,6 +17,10 @@ This Chic Coffee Menu will let you select your favorite coffee from the dropdown
 - Favorite your coffe by clicking the heart button.
 - Don't like the coffee anymore? Click the heart button a second time to unfavorite your coffee.
 
+### Resources
+
+- https://sampleapis.com/api-list/coffee
+- https://fontawesome.com
 
 ENJOY!!
 
