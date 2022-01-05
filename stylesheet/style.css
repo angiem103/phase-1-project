@@ -8,7 +8,7 @@ h1 {
     padding-left: 30px;
 }
 
-body, html {
+html {
     background-image: url("https://coffee-basic.com/wp-content/uploads/2021/03/cup-of-hot-coffee-scaled.jpg");
     background-size: cover;
     height: 100%;
