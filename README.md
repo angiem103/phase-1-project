@@ -1,7 +1,7 @@
-# Coffee Menu
+# Coffee Selector
 
 ### Overview
-This Chic Coffee Menu will let you select your favorite coffee from the dropdown and view its description and ingredients.
+This Chic Coffee Selector will let you select your favorite coffee from the dropdown and view its description and ingredients.
 
 ![coffee menu gift](https://user-images.githubusercontent.com/91964904/148150324-3d394881-3e29-4c9f-8c6b-f074c6b34c93.gif)
 
