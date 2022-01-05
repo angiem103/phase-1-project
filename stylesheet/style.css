@@ -4,13 +4,14 @@ h1 {
     font-family: Lucidatypewriter;
     font-weight: lighter;
     font-size: 65px;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-left: 30px;
 }
 
-body {
+body, html {
     background-image: url("https://coffee-basic.com/wp-content/uploads/2021/03/cup-of-hot-coffee-scaled.jpg");
     background-size: cover;
+    height: 100%;
 }
 
 label {
